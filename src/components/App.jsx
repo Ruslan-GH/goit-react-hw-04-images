@@ -14,7 +14,7 @@ const App = () => {
   const [imagesLength, setImagesLength] = useState('');
   const [status, setStatus] = useState('idle');
   const [page, setPage] = useState(1);
-  const [numberResults, setNumberResults] = useState('');
+  const [numberResults, setNumberResults] = useState(12);
   const [showModal, setShowModal] = useState(false);
   const [largeImage, setLargeImage] = useState('');
   const [altLargeImage, setAltLargeImage] = useState('');
@@ -30,7 +30,6 @@ const App = () => {
 
     if (imageName) {
       setStatus('pending');
-      setNumberResults(12);
 
       imageAPI
         .fetchImage(imageName, API_KEY, URL, page, numberResults)
